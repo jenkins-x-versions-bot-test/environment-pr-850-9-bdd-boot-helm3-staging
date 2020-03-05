@@ -1,0 +1,94 @@
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-credential-initializer-5qbcx[0m
+{"level":"warn","ts":1583429304.9428496,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583429304.943652,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-working-dir-initializer-zpjts[0m
+{"level":"warn","ts":1583429305.9571612,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583429305.9579594,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-jenkins-x-versions-bot-test-env-7sk7z-76bz9[0m
+{"level":"warn","ts":1583429312.1809494,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583429313.1916292,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/***************************/environment-pr-850-9-bdd-boot-helm3-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:08dd232bb0a95edfc9c03b0e60862fcc4e59b5da,1:6ee7b18e579641395201dec918a44b3b82911975
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow 6ee7b18e579641395201dec918a44b3b82911975: 08dd232bb0a95edfc9c03b0e60862fcc4e59b5da:
+DEBUG: ran git fetch --unshallow origin 6ee7b18e579641395201dec918a44b3b82911975: 08dd232bb0a95edfc9c03b0e60862fcc4e59b5da: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 08dd232bb0a95edfc9c03b0e60862fcc4e59b5da
+DEBUG: ran git reset --hard 08dd232bb0a95edfc9c03b0e60862fcc4e59b5da in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 6ee7b18e579641395201dec918a44b3b82911975
+DEBUG: ran git merge 6ee7b18e579641395201dec918a44b3b82911975 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 08dd232bb0a95edfc9c03b0e60862fcc4e59b5da..HEAD
+Merged SHA 6ee7b18e579641395201dec918a44b3b82911975 with commit message 'chore: Promote bdd-gh-1583429040 to version 0.0.1' into base branch master
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-create-helmfile[0m
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-lint-helmfile-system[0m
+Adding repo dev http://chartmuseum-**.34.76.225.104.nip.io
+"dev" has been added to your repositories
+
+Adding repo jenkins-x https://storage.googleapis.com/chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Adding repo zloeber git+https://github.com/rawlingsj/helm-namespace@chart
+"zloeber" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "zloeber" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Fetching jenkins-x/empty
+Fetching zloeber/namespace
+Linting release=empty, chart=/tmp/844422519/empty/latest/jenkins-x/empty/empty
+==> Linting /tmp/844422519/empty/latest/jenkins-x/empty/empty
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=namespace-**-staging, chart=/tmp/844422519/namespace-**-staging/latest/zloeber/namespace/namespace
+==> Linting /tmp/844422519/namespace-**-staging/latest/zloeber/namespace/namespace
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+
+
+Showing logs for build [32mjenkins-x-versions-bot-test-env-7sk7z-1[0m stage [32mpr-checks[0m and container [32mstep-lint-helmfile-apps[0m
+Adding repo dev http://chartmuseum-**.34.76.225.104.nip.io
+"dev" has been added to your repositories
+
+Adding repo jenkins-x http://chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Adding repo zloeber git+https://github.com/rawlingsj/helm-namespace@chart
+"zloeber" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "zloeber" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Fetching dev/bdd-gh-1583429040
+Fetching zloeber/namespace
+Linting release=bdd-gh-1583429040, chart=/tmp/282715541/bdd-gh-1583429040/0.0.1/dev/bdd-gh-1583429040/bdd-gh-1583429040
+==> Linting /tmp/282715541/bdd-gh-1583429040/0.0.1/dev/bdd-gh-1583429040/bdd-gh-1583429040
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=namespace-**-staging, chart=/tmp/282715541/namespace-**-staging/latest/zloeber/namespace/namespace
+==> Linting /tmp/282715541/namespace-**-staging/latest/zloeber/namespace/namespace
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+
